@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background: rgb(191, 83, 191);
+            color: white;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">  <!--- onclick="clicar()" onmouseenter = "entrar()" onmouseleave = "sair()" NAO É NECESSARIO SE USAR O EVENT LISTENER--->
+        intereja...
+    </div>
+    <script>
+        var area = window.document.getElementById('area') //nao recomendado o var nesse escopo, apenas para ex
+
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair) //ligaçao do html ao java com event listener
+    
+
+        function clicar() {
+            area.innerText = 'cliclou!'
+            area.style.background = "blue"
+        }
+        function entrar() {
+         area.innerText = 'entrou!'
+        }
+        function sair(){
+            area.innerText = 'saiu!'
+            area.style.background = 'purple'
+        }
+
+        // USAR O DEV TOOLS PARA CORREÇAO DE ERROS
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(164, 128, 198);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+   <h1>Estudos com DOM</h1> 
+   <p>Aqui vai o resultado</p>
+   <p>Aprendendo a usar <strong> DOM </strong> em JavaScript</p>
+   <div class ="msg">clique aqui</div>
+   <script>
+    var p1= window.document.getElementsByTagName('p')[1] //primeiro paragrafo(p) é 0, o proximo é 1 etc
+    window.document.write(p1.innerText) //mostra o que esta escrito
+    window.document.write(p1.innerHTML) //mostra com a formataçao html
+
+    /*var div = window.document.getElementById('msg')
+    div.style.background = "purple" */
+
+    /*var div = window.document.getElementsByClassName('msg')[0]
+    div.innerText = 'estou aguardando...'*/
+
+    var div = window.document.querySelector('div.msg')
+    div.style.background = 'purple'
+
+    /*quando for mais de um elemento use [] para identificar qual
+    quando o  ELEMENT terminar com S (ELEMENTS)
+    */
+    
+    /*
+    seletor global: *
+    seletor id: #
+    seletor class: .
+    */
+
+    </script>
+</body>
+</html>
