@@ -1,9 +1,17 @@
+// normalmente usado quando nao se sabe quantas repeticoes teram que ocorrer
+// while - checa a condiçao e depois executa o codigo
+// do while - executa o codigo e depois chega a condiçao
 /*
-const nome = 'sabrina'
 let i = 0
+while (i <=10){
+    console.log(i)
+    i++
+}
+
+const nome = 'sabrina'
 while (i < nome.length){
     console.log(nome[i])
-    i++ //att a var de controle pra nao criar um laço infinito
+    i++ //att a var de controle para nao criar um laço infinito
 }
 */
 function random (min,max){
@@ -15,7 +23,7 @@ const max = 50
 let rand = random(min,max)
 
 while (rand !== 10){
-  rand = random(min,max)
+  rand = random(min,max) //att a funçao
     console.log(rand)
 }
 
