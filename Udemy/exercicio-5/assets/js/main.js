@@ -24,8 +24,9 @@ function iniciaRelogio(){
         relogio.innerHTML = criaHoraDosSegundos(segundos)
     }, 1000)
 }
+
 document.addEventListener('click', function(e){
-   const elemento = e.target
+   const elemento = e.target // target = mostra qual elemento esta sendo clicado
 
    if (elemento.classList.contains('zerar')){
     relogio.classList.remove('pausado')
@@ -45,4 +46,4 @@ document.addEventListener('click', function(e){
     clearInterval(timer)
    }
 })
-   
+relogio()
