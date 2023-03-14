@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root{ /*uma variavel global ára guardar a cor e so precisar mudar aqui*/
+    --cor-primaria: rgb(163, 149, 212);
+    --cor-primaira-escura: rgb(143, 123, 209);
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--cor-primaria); /*chamando a variavel global*/
+    font-family:'Open Sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+
+}
+
+.container{ /*deixa o conteudo no meio da pag*/
+    /*max-width: 400px;
+    height: 800px;
+    margin: 10px auto; /*cima-baixo 20, laterais altomatico*/
+    /*background: rgb(224, 220, 235);
+    padding: 20px;
+    border-radius: 10px;*/
+
+    width: 440px;
+    height: 440px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+form input, form label, form button{ /*como nao tem classe,chama pelo nome todos*/
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    
+    /*border-radius: 15px;
+    border- */
+}
+
+form input{
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input:focus { /*todos os inputs da form quando estiver em focus*/
+    outline: 1px solid  var(--cor-primaria);
+}
+
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer; /*deixa a maozinha encima no cursor*/
+    margin-top: 30px;
+}
+
+form button:hover{
+    background: var(--cor-primaira-escura);
+}
+
+.calculadora{
+    width: 400px;
+}
+
+.display{
+    font-size: 2em;
+    width: 374px;
+    text-align: right;
+}
+
+.btn{
+    width: 89px;
+    height: 49px;
+    margin: 3px auto;
+    font-size: 1em;
+    border: none;
+    background: #dfdfdf ;
+    cursor: pointer;
+}

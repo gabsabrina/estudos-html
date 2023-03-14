@@ -3,11 +3,20 @@ function criaPessoa (nome,sobrenome,altura,peso){
     return {
         nome,
         sobrenome,
-        nomeCompleto(){
-            return `${nome} ${sobrenome}`
-        },
 
-        fala(assunto){
+        //getter
+        get nomeCompleto(){ // metodo q tras o nome completo
+            return `${this.nome} ${this.sobrenome}`
+        },
+        //setter
+        set nomeCompleto(valor){
+            valor = valor.split(' ') // divide a nos espacos e cria arrays\vetor
+            this.nome = valor.shift()// remove e retorna o valor do primeiro array
+            this.sobrenome = valor.join (' ') // Pega o resto, junta em uma string e separa por algo
+           
+        }, 
+
+        fala(assunto = 'falando algo'){
             return `${this.nome} esta ${assunto}`
         },
 
@@ -22,5 +31,10 @@ function criaPessoa (nome,sobrenome,altura,peso){
     }
 }
 const p1 = criaPessoa ('gabi', 'sabrina', 1.60, 53)
-console.log(p1.nomeCompleto())
+p1.nomeCompleto =  'victor cardoso mota'
+console.log(p1.nome)
+console.log(p1.sobrenome)
+console.log(p1.nomeCompleto)
+console.log(p1.fala())
 
+//funçao construtora
