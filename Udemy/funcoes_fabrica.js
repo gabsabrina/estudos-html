@@ -1,4 +1,4 @@
-// factory functions
+// factory functions - funcoes que retornam objetos
 function criaPessoa (nome,sobrenome,altura,peso){
     return {
         nome,
@@ -36,5 +36,3 @@ console.log(p1.nome)
 console.log(p1.sobrenome)
 console.log(p1.nomeCompleto)
 console.log(p1.fala())
-
-//funçao construtora
