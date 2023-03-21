@@ -54,7 +54,27 @@ console.log(novo4)
 
 //SPLICE > faz os mesmo q pop,push
 //nomes.splice(indie,delete,elem1,elemento2,elemento3)
+// indice     0        1        2           3          4
+// inc nega  -5       -4       -3          -2         -1   
 const n9 = ['maria', 'joao', 'eduardo', 'gabriel', 'julia']
-const removidos = n9.splice(3,2)
+const removidos = n9.splice (3,2,'luiz,', 'otario')//  
+//const removidos = n9.splice(-2,1)
 console.log(n9,removidos)
+
+//(3,2,'luiz,', 'otario') -> apatir do indce 3  remove 2 e add luiz otario
+//(3, 0,'luiz')-> add no indice 3 o luiz
+//(-2,Number.MAX_VALUE) -> remove os dois ultimos
+//n9.splice(-2,1) -> comeca do -2 e remove 1
+
+//POP
+//const removidos = nones.splice(-1,1)
+
+//SHIFT
+//const removidos = nomes.splice(0,1)
+
+//PUSH
+//nomes.splice(nomes.length, 0, 'luiz')
+
+//UNSHIFT
+//nomes.splice(0, 0,' luiz', 'otavio')
 
